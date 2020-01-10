@@ -1,0 +1,77 @@
+.welcome-card {
+    height: 150vh;
+    overflow: hidden;
+    background: url(/assets/crusades.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.heroPic{
+    width: 50%;
+}
+button.hideEx {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 1.2em;
+}
+.answer {
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    background: #5a5a5a;
+    padding: 2%;
+}
+.decipher{
+    font-size: 2em;
+}
+.linkHover{
+    cursor:pointer;
+}
+
+@media only screen and (max-width: 600px) {
+.welcome-card {
+    height: 100vh;
+    }
+  }
+
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.31, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="solveTitle">
+        <ion-button color="primary" expand="full" class="solveButton" (click)="presentAlert()" >Solve...</ion-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    
+    <ion-card [@changeDivSize]=currentState class="welcome-card">
+     <div class="answer swing animated" [hidden]=ishidden>{{secretMessage}}<button (click)="hideMessage()" class="hideEx">x</button></div>
+<br />
+
+
+<audio autoplay>
+  <source src="/assets/hall.mp3" type="audio/ogg">
+  <source src="/assets/hall.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+        
+    </ion-card>
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label>Resources</ion-label>
+      </ion-list-header>
+
+      <ion-item (click)="originalState()" class="linkHover">
+        <ion-icon slot="start" color="medium" name="book"></ion-icon>
+        <ion-label class="decipher animated infinite bounce">Decipher This Image</ion-label>
+      </ion-item>
+
+      <ion-item (click)="changeState()" class="linkHover">
+        <ion-icon slot="start" color="medium" name="moon"></ion-icon>
+        <ion-label>Islamic Documentation</ion-label>
+      </ion-item>
+      <ion-item (click)="changeState1()" class="linkHover">
+        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
+        <ion-label>Gate Symbolism</ion-label>
+      </ion-item>
+      <ion-item (click)="changeState2()" class="linkHover">
+        <ion-icon slot="start" color="medium" name="leaf"></ion-icon>
+        <ion-label>Tree Symbolism</ion-label>
+      </ion-item>
+    </ion-list>
+</ion-content>

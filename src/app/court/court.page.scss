@@ -1,0 +1,127 @@
+.hiddenButton{
+        background: url(/assets/plague.png);
+    background-position: center;
+    background-size: 100%;
+    width: 71px;
+    height: 80px;
+    background-repeat: no-repeat;
+}
+.iFramLinky {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+iframe.iframestyle {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    position:relative;
+    z-index:2;
+}
+audio {
+    margin: 0 auto;
+}
+h3{
+    text-align:center;
+}
+.redundantLink {
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+    position: relative;
+}
+.sectionForText {
+    margin: 1%;
+    grid-template-columns: 5% 25% 68%;
+    display: grid;
+}
+input.native-input.sc-ion-input-md {
+    padding: 12px;
+}
+span.textClue {
+    font-family: fantasy;
+    font-size: 1em;
+    color: red;
+    position: relative;
+    top: 1px;
+        display: flex;
+    align-items: center;
+}
+input.native-input.sc-ion-input-md {
+    background: #ffe2e2;
+    border: 1px solid black;
+    padding: 1px;
+}
+span.textClue {
+    padding-right: 5px;
+
+}
+.answersCourt p{
+    font-weight: bold;
+        margin: 4px;
+}
+nput.native-input.sc-ion-input-md {
+    background: #e8c5c5;
+    border: 1px solid black;
+}
+
+.inputStyle{
+    background: white;
+    margin: 3px 0;
+    border: 1px solid;
+}
+.answersCourt {
+    display: flex;
+    flex-direction: column;
+}
+.courtContentContainer {
+    margin: 2% 5%;
+    background-image: url(/assets/bloodBackground.png);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1%;
+}
+ 
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.tada {
+  animation-name: tada;
+}
+.animated.infinite {
+  animation-iteration-count: infinite;
+    position: relative;
+    top: 10px;
+}
