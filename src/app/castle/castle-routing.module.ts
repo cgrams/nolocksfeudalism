@@ -38,6 +38,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'vault',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../vault/vault.module').then(m => m.VaultPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/castle/hall',
         pathMatch: 'full'

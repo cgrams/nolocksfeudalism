@@ -18,7 +18,14 @@ ul{
 
 h2 {
     text-align: center;
+    color: white;
 }
 .h1_page_head {
     display: none;
+}
+iframe#proprofs {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

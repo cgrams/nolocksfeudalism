@@ -1,0 +1,36 @@
+.stepsContainer{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/assets/vault.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+ 
+}
+.textColorSteps {
+    color: white;
+    padding: 1%;
+    background: #00000029;
+    list-style: none;
+    margin: 4px 0;
+}
+
+ul{
+    padding:0px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+.h1_page_head {
+    display: none;
+}
+iframe#proprofs {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
