@@ -7,11 +7,38 @@
 </ion-header>
 
 <ion-content>
-    <div class="stepsContainer">
+    <div class="stepsContainer" [@changeDivSize]=currentState>
         <main>
-            <img (swipeleft)="swipeLeft()" src="/assets/arrow.png" />
-            <input />
+
+            <div class="castleNumbers" *ngIf="showCasltInputSection">
+                <h2 class="intorTitle">Enter The Numbers Found on the Previous Pages</h2>
+                <input type="number" [(ngModel)]="hallInput" name="hall" placeholder="Hall #"/>
+                <input type="number" [(ngModel)]="dungeonInput" name="dungeon" placeholder="Dungeon #"/>
+                <input type="number" [(ngModel)]="courtInput1" name="court1" placeholder="Court1 #"/>
+                <input type="number" [(ngModel)]="courtInput2" name="court2" placeholder="Court2 #"/>
+                <br />
+                <ion-button class="topEnder" (click)="enterOne()" *ngIf="showCasltInputSection">Enter</ion-button>
+            </div>
+
+            <div *ngIf="showArrowSection">
+                <div class="directionsResults" *ngFor="let direction of directions" >
+                    {{direction}}
+                </div>
+            </div>
+
+            <div class="showMe" *ngIf="showArrowSection">
+                <ion-button shape="round" class="deletePreviousDirection" (click)="deletDirections(directioned)">Undo Direction</ion-button>
+                <div class="leftArrowSpin arrows" (swipeleft)="swipeLeft()" (click)="swipeLeft()"></div>
+                <div class="upArrowSpin arrows" (swipe)="swipeUp()" (click)="swipeUp()"></div>
+                <div class="rightArrowSpin arrows" (swiperight)="swipeRight()" (click)="swipeRight()"></div>
+                <div class="downArrowSpin arrows" (swipedown)="swipeDown()" (click)="swipeDown()"></div>
+                <ion-button color="secondary enterButton" (click)="enterTwo()" >Enter</ion-button>
+            </div>
+            <div *ngIf="failArrowSection">
+                <h2>No, wrong answer...</h2>
+            </div>
         </main>
-         
+
+
     </div>
 </ion-content>
