@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import {
   trigger,
   state,
@@ -36,6 +37,9 @@ export class VaultPage {
     showArrowSection:boolean = false;
     showCasltInputSection:boolean = true;
     failArrowSection:boolean = false;
+    fiveDigits:boolean = true;
+
+    
     directions: any;
     directioned:any;
     public directionalOutput:any = [];;
@@ -43,6 +47,7 @@ export class VaultPage {
     dungeonInput:number;
     courtInput1:number;
     courtInput2:number;
+    longNumberVariable:number;
 
     playAudio(){
       let audio = new Audio();
@@ -114,4 +119,10 @@ export class VaultPage {
         }
     }
 
+
+        longNumber(){
+            if(this.longNumberVariable === 4){
+                alert(22);
+            }
+        }
 }

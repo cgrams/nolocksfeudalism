@@ -34,6 +34,13 @@
                 <div class="downArrowSpin arrows" (swipedown)="swipeDown()" (click)="swipeDown()"></div>
                 <ion-button color="secondary enterButton" (click)="enterTwo()" >Enter</ion-button>
             </div>
+
+            <div class="longNumber" *ngIf="fiveDigits">
+                <input type="number" [(ngModel)]="longNumberVariable" name="longNumber" placeholder="Input Five Numbers"/>
+                <button (click)="longNumber()">Enter Long Numbers</button>
+            </div>
+
+
             <div *ngIf="failArrowSection">
                 <h2>No, wrong answer...</h2>
             </div>
