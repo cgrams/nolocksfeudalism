@@ -37,7 +37,7 @@ export class VaultPage {
     showArrowSection:boolean = false;
     showCasltInputSection:boolean = true;
     failArrowSection:boolean = false;
-    fiveDigits:boolean = true;
+    fiveDigits:boolean = false;
 
     
     directions: any;
@@ -64,6 +64,20 @@ export class VaultPage {
     }   
 
   constructor() { this.directions = [] }
+
+    classVariableA:string = "animated letter";
+    classVariableB:string = "animated letter";
+
+    lettersCoolA(x){
+        this.classVariableA = "animated letter swing";
+        setTimeout(() =>{ this.classVariableA = "animated letter"; },500);
+    }
+
+    lettersCoolB(x){
+        this.classVariableB = "animated swing letter";
+        setTimeout(() =>{ this.classVariableB = "animated letter " },500);
+    }
+
     swipeLeft(){
         this.directions.push('Left');
     }
@@ -79,28 +93,11 @@ export class VaultPage {
     };
 
 
-
     deletDirections(directioned){
         let index = this.directions.indexOf(directioned);
         if(index >= -1){this.directions.splice(index, 1); }
         console.log(index);
     }
-
- 
-    enterTwo(){
-        let i = 0;
-        var stringOfDirections = this.directions.toString();
-            if(stringOfDirections==="Right,Down,Up,Down,Left,Left"){
-                this.showArrowSection = false;
-                console.log(stringOfDirections + ' worked');
-                this.currentState = 'initial';
-                this.playAudioWin();
-            }else{
-                this.playAudio();
-                this.currentState = 'final' ;
-            };
-  
-    };
 
     enterOne(){
         console.log('enter works');
@@ -119,10 +116,27 @@ export class VaultPage {
         }
     }
 
+    enterTwo(){
+        let i = 0;
+        var stringOfDirections = this.directions.toString();
+            if(stringOfDirections==="Right,Down,Up,Down,Left,Left"){
+                this.showArrowSection = false;
+                console.log(stringOfDirections + ' worked');
+                this.currentState = 'initial';
+                this.playAudioWin();
+                this.fiveDigits = true;
+            }else{
+                this.playAudio();
+                this.currentState = 'final' ;
+            };
+    };
 
-        longNumber(){
-            if(this.longNumberVariable === 4){
-                alert(22);
+    longNumber(){
+        if(this.longNumberVariable === 25743){
+            this.fiveDigits = false;
+            this.playAudioWin();
+        }else{
+                this.playAudio();
             }
-        }
+    }
 }

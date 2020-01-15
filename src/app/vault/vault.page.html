@@ -11,7 +11,7 @@
         <main>
 
             <div class="castleNumbers" *ngIf="showCasltInputSection">
-                <h2 class="intorTitle">Enter The Numbers Found on the Previous Pages</h2>
+                <h2 class="intorTitle">Enter The Numbers Found in the: <br />Hall, Dungeon and Court</h2>
                 <input type="number" [(ngModel)]="hallInput" name="hall" placeholder="Hall #"/>
                 <input type="number" [(ngModel)]="dungeonInput" name="dungeon" placeholder="Dungeon #"/>
                 <input type="number" [(ngModel)]="courtInput1" name="court1" placeholder="Court1 #"/>
@@ -36,10 +36,39 @@
             </div>
 
             <div class="longNumber" *ngIf="fiveDigits">
-                <input type="number" [(ngModel)]="longNumberVariable" name="longNumber" placeholder="Input Five Numbers"/>
-                <button (click)="longNumber()">Enter Long Numbers</button>
+                <input type="number" [(ngModel)]="longNumberVariable" name="longNumber" placeholder="#####"/>
+                <button (click)="longNumber()">Enter Combo Numbers</button>
             </div>
 
+
+            <div class="alphabetSection">
+                <div (click)="lettersCoolA()" id="aaa" [class]="classVariableA"></div>
+                <div (click)="lettersCoolB()" id="bbb" [class]="classVariableB"></div>
+                <div (click)="lettersCool()" id="ccc" [class]="classVariable"></div>
+                <div (click)="lettersCool()" id="ddd" [class]="classVariable"></div>
+                <div (click)="lettersCool()" id="eee" [class]="classVariable"></div>
+                <div (click)="lettersCool()" id="fff" [class]="classVariable"></div>
+                <div (click)="lettersCool()" id="ggg" [class]="classVariable"></div>
+                <div (click)="lettersCool()" id="hhh" [class]="classVariable"></div>
+                <div (click)="lettersCool()" id="iii" [class]="classVariable"></div>
+                <div (click)="lettersCool()" id="jjj" [class]="classVariable"></div>
+                <div (click)="lettersCool()" id="kkk" [class]="classVariable"></div>
+                <div (click)="lettersCool()" id="lll" [class]="classVariable"></div>
+                <div (click)="lettersCool()" id="mmm" [class]="classVariable"></div>
+                <div (click)="lettersCool()" id="nnn" [class]="classVariable"></div>
+                <div (click)="lettersCool()" id="ooo" [class]="classVariable"></div>
+                <div class="letter ppp"></div>
+                <div class="letter qqq"></div>
+                <div class="letter rrr"></div>
+                <div class="letter sss"></div>
+                <div class="letter ttt"></div>
+                <div class="letter uuu"></div>
+                <div class="letter vvv"></div>
+                <div class="letter www"></div>
+                <div class="letter xxx"></div>
+                <div class="letter yyy"></div>
+                <div class="letter zzz"></div>
+            </div>
 
             <div *ngIf="failArrowSection">
                 <h2>No, wrong answer...</h2>

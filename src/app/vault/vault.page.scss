@@ -27,6 +27,199 @@ h2.intorTitle {
 main {
     width: 100%;
 }
+.letter {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.alphabetSection {
+    display: grid;
+    grid-template-columns: repeat(6, 15%);
+    margin: 0 auto;
+}
+#aaa {
+    background: url(/assets/alphabet/a.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+        background-position: center center;
+    width: 100%;
+}
+#bbb {
+    background: url(/assets/alphabet/b.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#ccc {
+    background: url(/assets/alphabet/c.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#ddd {
+    background: url(/assets/alphabet/d.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#eee {
+    background: url(/assets/alphabet/e.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#fff {
+    background: url(/assets/alphabet/f.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#ggg {
+    background: url(/assets/alphabet/g.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#hhh {
+    background: url(/assets/alphabet/h.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#iii {
+    background: url(/assets/alphabet/i.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#jjj {
+    background: url(/assets/alphabet/j.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#kkk {
+    background: url(/assets/alphabet/k.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#lll {
+    background: url(/assets/alphabet/l.png);
+    background-size: contain;
+        background-position: center center;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+#mmm {
+    background: url(/assets/alphabet/m.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#nnn {
+    background: url(/assets/alphabet/n.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#ooo {
+    background: url(/assets/alphabet/o.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#ppp {
+    background: url(/assets/alphabet/p.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#qqq {
+    background: url(/assets/alphabet/q.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#rrr {
+    background: url(/assets/alphabet/r.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#sss {
+    background: url(/assets/alphabet/s.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#ttt {
+    background: url(/assets/alphabet/t.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#uuu {
+    background: url(/assets/alphabet/u.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#vvv {
+    background: url(/assets/alphabet/v.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#www {
+    background: url(/assets/alphabet/w.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#xxx {
+    background: url(/assets/alphabet/x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+        background-position: center center;
+    width: 100%;
+}
+#yyy {
+    background: url(/assets/alphabet/y.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+#zzz {
+    background: url(/assets/alphabet/z.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+
 .longNumber {
     margin: 0 auto;
     display: flex;  
@@ -137,4 +330,41 @@ iframe#proprofs {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+.swing {
+  transform-origin: top center;
+  animation-name: swing;
+}
+
+.swing {
+  transform-origin: top center;
+  animation-name: swing;
 }
