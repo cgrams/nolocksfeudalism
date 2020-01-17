@@ -37,11 +37,11 @@
 
             <div class="longNumber" *ngIf="fiveDigits">
                 <input type="number" [(ngModel)]="longNumberVariable" name="longNumber" placeholder="#####"/>
-                <button (click)="longNumber()">Enter Combo Numbers</button>
+                <ion-button  block (click)="longNumber()" class="enterComboButton">Enter Combo Numbers</ion-button>
             </div>
 
-
-            <div class="alphabetSection" *ngIf="fiveDigits">
+            <h3 class="aplabetTtotle"><span *ngFor="let word1 of wordyWord">{{word1}}</span></h3>
+            <div class="alphabetSection" *ngIf="alphabetSoup">
                 <div (click)="lettersCoolA()" id="aaa" [class]="classVariableA"></div>
                 <div (click)="lettersCoolB()" id="bbb" [class]="classVariableB"></div>
                 <div (click)="lettersCoolC()" id="ccc" [class]="classVariableC"></div>
