@@ -17,7 +17,7 @@
                 <input type="number" [(ngModel)]="courtInput1" name="court1" placeholder="Court1 #"/>
                 <input type="number" [(ngModel)]="courtInput2" name="court2" placeholder="Court2 #"/>
                 <br />
-                <ion-button class="topEnder" (click)="enterOne()" *ngIf="showCasltInputSection">Enter</ion-button>
+                <ion-button class="topEnder" (click)="enterOne()" *ngIf="showCasltInputSection">Enter Numbers</ion-button>
             </div>
 
             <div *ngIf="showArrowSection">
@@ -32,7 +32,7 @@
                 <div class="upArrowSpin arrows" (swipe)="swipeUp()" (click)="swipeUp()"></div>
                 <div class="rightArrowSpin arrows" (swiperight)="swipeRight()" (click)="swipeRight()"></div>
                 <div class="downArrowSpin arrows" (swipedown)="swipeDown()" (click)="swipeDown()"></div>
-                <ion-button color="secondary enterButton" (click)="enterTwo()" >Enter</ion-button>
+                <ion-button color="secondary enterButton" (click)="enterTwo()" >Enter Directions</ion-button>
             </div>
 
             <div class="longNumber" *ngIf="fiveDigits">
@@ -40,7 +40,12 @@
                 <ion-button  block (click)="longNumber()" class="enterComboButton">Enter Combo Numbers</ion-button>
             </div>
 
-            <h3 class="aplabetTtotle"><span *ngFor="let word1 of wordyWord">{{word1}}</span></h3>
+            <div class="enterAlphabet" *ngIf="alphabetSoup">
+                <h3 class="aplabetTtotle">
+                    <span *ngFor="let word1 of wordyWord">{{word1}}</span>
+                </h3>
+                <ion-button *ngIf="enterWordShow" block (click)="meldsAnswer()" class="enterWordButton">Enter Word</ion-button>
+            </div>
             <div class="alphabetSection" *ngIf="alphabetSoup">
                 <div (click)="lettersCoolA()" id="aaa" [class]="classVariableA"></div>
                 <div (click)="lettersCoolB()" id="bbb" [class]="classVariableB"></div>
@@ -70,9 +75,29 @@
                 <div (click)="lettersCoolZ()" id="zzz" [class]="classVariableZ"></div>
             </div>
 
+
+            <div class="lastNubersSection" *ngIf="lastNumShow">
+                <div class="lastNumsOutput" >{{lastNumVariable}}</div>
+                <input type="number" [(ngModel)]="lastNumVariable" name="lastNumber" placeholder="###" />
+                <ion-button block (click)="lastAnswer()" class="enterLastButton">Enter Number</ion-button>
+            </div>
+
+            <div class="finalWin" *ngIf="finalWinShow">
+                <h2>Tap out the song that children sang about the black death on the button with a picture of a doctor</h2>
+                <audio controls>
+                <source src="/assets/kingsThrone.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
+
+
             <div *ngIf="failArrowSection">
                 <h2>No, wrong answer...</h2>
             </div>
+
+
+
+
         </main>
 
 

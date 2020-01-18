@@ -20,9 +20,7 @@ animations: [
       backgroundImage: 'url(/assets/vault.jpg)'
     })),
     state('final', style({
-      
         backgroundImage: 'url(/assets/nay.png)'
- 
     })),
     transition('initial=>final', animate('1500ms')),
     transition('final=>initial', animate('1000ms'))
@@ -39,6 +37,9 @@ export class VaultPage {
     failArrowSection:boolean = false;
     fiveDigits:boolean = false;
     alphabetSoup:boolean = false;
+    enterWordShow:boolean = false;
+    lastNumShow:boolean = false;
+    finalWinShow:boolean = false;
 
     wordyWord: any;
     directions: any;
@@ -49,6 +50,7 @@ export class VaultPage {
     courtInput1:number;
     courtInput2:number;
     longNumberVariable:number;
+    lastNumVariable:number;
 
     playAudio(){
       let audio = new Audio();
@@ -105,60 +107,80 @@ export class VaultPage {
         this.classVariableA = "animated letter swing";
         setTimeout(() =>{ this.classVariableA = "animated letter"; },500);
         this.playAudioLetter();
+        this.wordyWord.push('A');
+        this.enterWordShow = true;
     }
 
     lettersCoolB(){
         this.classVariableB = "animated swing letter";
         setTimeout(() =>{ this.classVariableB = "animated letter " },500);
         this.playAudioLetter();
+        this.wordyWord.push('B');
+        this.enterWordShow = true;
     }
 
     lettersCoolC(){
         this.classVariableC = "animated swing letter";
         setTimeout(() =>{ this.classVariableC = "animated letter " },500);
         this.playAudioLetter();
+        this.wordyWord.push('C');
+        this.enterWordShow = true;
     }
 
     lettersCoolD(){
         this.classVariableD = "animated swing letter";
         setTimeout(() =>{ this.classVariableD = "animated letter " },500);
         this.playAudioLetter();
+        this.wordyWord.push('D');
+        this.enterWordShow = true;
     }
 
     lettersCoolE(){
         this.classVariableE = "animated swing letter";
         setTimeout(() =>{ this.classVariableE = "animated letter " },500);
         this.playAudioLetter();
+        this.wordyWord.push('E');
+        this.enterWordShow = true;
     }
 
     lettersCoolF(){
         this.classVariableF = "animated swing letter";
         setTimeout(() =>{ this.classVariableF = "animated letter " },500);
         this.playAudioLetter();
+        this.wordyWord.push('F');
+        this.enterWordShow = true;
     }
 
     lettersCoolG(){
         this.classVariableG = "animated swing letter";
         setTimeout(() =>{ this.classVariableG = "animated letter " },500);
         this.playAudioLetter();
+        this.wordyWord.push('G');
+        this.enterWordShow = true;
     }
 
     lettersCoolH(){
         this.classVariableH = "animated swing letter";
         setTimeout(() =>{ this.classVariableH = "animated letter " },500);
         this.playAudioLetter();
+        this.wordyWord.push('H');
+        this.enterWordShow = true;
     }
 
     lettersCoolI(){
         this.classVariableI = "animated swing letter";
         setTimeout(() =>{ this.classVariableI = "animated letter " },500);
         this.playAudioLetter();
+        this.wordyWord.push('I');
+        this.enterWordShow = true;
     }
 
     lettersCoolJ(){
         this.classVariableJ = "animated swing letter";
         setTimeout(() =>{ this.classVariableJ = "animated letter " },500);
-         this.playAudioLetter();
+        this.playAudioLetter();
+        this.wordyWord.push('J');
+        this.enterWordShow = true;
     }
 
     lettersCoolK(){
@@ -166,6 +188,7 @@ export class VaultPage {
         setTimeout(() =>{ this.classVariableK = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('K');
+        this.enterWordShow = true;
     }
 
     lettersCoolL(){
@@ -181,31 +204,35 @@ export class VaultPage {
         setTimeout(() =>{ this.classVariableM = "animated letter " },500);
         this.wordyWord.push('M');
         var stringOfWordyWords = this.wordyWord.toString();
-        console.log(stringOfWordyWords);
+        this.enterWordShow = true;
     }
     lettersCoolN(){
         this.classVariableN = "animated swing letter";
         setTimeout(() =>{ this.classVariableN = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('N');
+        this.enterWordShow = true;
     }
     lettersCoolO(){
         this.classVariableO = "animated swing letter";
         setTimeout(() =>{ this.classVariableO = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('O');
+        this.enterWordShow = true;
     }
     lettersCoolP(){
         this.classVariableP = "animated swing letter";
         setTimeout(() =>{ this.classVariableP = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('P');
+        this.enterWordShow = true;
     }
     lettersCoolQ(){
         this.classVariableQ = "animated swing letter";
         setTimeout(() =>{ this.classVariableQ = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('Q');
+        this.enterWordShow = true;
     }
     lettersCoolR(){
         this.classVariableR = "animated swing letter";
@@ -218,48 +245,56 @@ export class VaultPage {
         setTimeout(() =>{ this.classVariableS = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('S');
+        this.enterWordShow = true;
     }
     lettersCoolT(){
         this.classVariableT = "animated swing letter";
         setTimeout(() =>{ this.classVariableT = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('T');
+        this.enterWordShow = true;
     }
     lettersCoolU(){
         this.classVariableU = "animated swing letter";
         setTimeout(() =>{ this.classVariableU = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('U');
+        this.enterWordShow = true;
     }
     lettersCoolV(){
         this.classVariableV = "animated swing letter";
         setTimeout(() =>{ this.classVariableV = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('V');
+        this.enterWordShow = true;
     }
     lettersCoolW(){
         this.classVariableW = "animated swing letter";
         setTimeout(() =>{ this.classVariableW = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('W');
+        this.enterWordShow = true;
     }
     lettersCoolX(){
         this.classVariableX = "animated swing letter";
         setTimeout(() =>{ this.classVariableX = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('X');
+        this.enterWordShow = true;
     }
     lettersCoolY(){
         this.classVariableY = "animated swing letter";
         setTimeout(() =>{ this.classVariableY = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('Y');
+        this.enterWordShow = true;
     }
     lettersCoolZ(){
         this.classVariableZ = "animated swing letter";
         setTimeout(() =>{ this.classVariableZ = "animated letter " },500);
         this.playAudioLetter();
         this.wordyWord.push('Z');
+        this.enterWordShow = true;
     }
 
 
@@ -323,9 +358,34 @@ export class VaultPage {
             this.fiveDigits = false;
             this.playAudioWin();
             this.alphabetSoup = true;
+            this.currentState = 'initial';
         }else{
                 this.playAudio();
                 this.alphabetSoup = false;
+                this.currentState = 'final';
             }
+    }
+
+    meldsAnswer(){
+        var stringOfwordyWord = this.wordyWord.toString();
+        console.log(stringOfwordyWord);
+        if(stringOfwordyWord === "M,E,L,D,S" ){
+            this.alphabetSoup = false;
+            this.currentState = 'initial';
+            this.playAudioWin();
+            this.lastNumShow = true;
+        }else{
+            this.currentState = 'final';
+            this.playAudio();
+        }
+    }
+
+    lastAnswer(){
+        if(this.lastNumVariable === 415){
+            this.lastNumShow = false;
+            this.playAudioWin();
+            this.finalWinShow = true;
+        }
+        console.log("last nums");
     }
 }

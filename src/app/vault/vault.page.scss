@@ -295,6 +295,37 @@ button.topEnder {
     position: relative;
     top: 26px;
 }
+.finalWin h2 {
+    background: black;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.lastNubersSection.ng-tns-c3-0.ng-star-inserted {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.lastNumsOutput {
+    background: wheat;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+h3.aplabetTtotle {
+    text-align: center;
+    background: #00000087;
+    max-width: 300px;
+    margin: 10px auto;
+}
+.enterAlphabet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
 .directionsResults {
     background: white;
     text-align: center;
