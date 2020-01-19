@@ -40,6 +40,7 @@ export class VaultPage {
     enterWordShow:boolean = false;
     lastNumShow:boolean = false;
     finalWinShow:boolean = false;
+    extensionBool:boolean = false;
 
     wordyWord: any;
     directions: any;
@@ -388,4 +389,8 @@ export class VaultPage {
         }
         console.log("last nums");
     }
+
+     myChange($event) {
+     this.extensionBool = true;
+ }
 }

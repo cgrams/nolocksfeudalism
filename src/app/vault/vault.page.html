@@ -86,8 +86,35 @@
                 <h2>Tap out the song that children sang about the black death on the button with a picture of a doctor</h2>
                 <audio controls>
                 <source src="/assets/kingsThrone.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
+                    Your browser does not support the audio element.
                 </audio>
+                <div class="missionExtension">
+                    <h3>After you find the last clue do you want to extend the mission?</h3>
+                      <ion-item>
+                        <ion-label>Yes we want to extend the mission...</ion-label>
+                        <ion-toggle [(ngModel)]="extensionBool" (ionChange)="myChange($event)"></ion-toggle>
+                      </ion-item>
+                    <div class="twoChoices" *ngIf="extensionBool">
+                        <h1>Think about your group choice before you click! Everyone must have a concensus. You cannot change your mind afterwords...</h1>
+                        <ul>
+                            <li class="joinRebels">
+                                <h2>Join the Rebellion</h2>
+                                <div class="rebellionPic"></div>
+                                <p>
+                                    We want to know about what you think about changing the past. If you could go back in time and change the future... would you? What things would you change.
+                                    Give a full response with paragraphs and support your reasioning.
+                                </p>
+                            </li>
+                            <li class="fightForGove">
+                                <h2>Fight for the Government</h2>
+                                <div class="govPic"></div>
+                                <p>Help us determine who we should arrests. Who tried to kill the king? What evidence do you have to support your argument? Write your report in full paragraphs.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
             </div>
 
 
